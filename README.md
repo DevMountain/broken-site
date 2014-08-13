@@ -61,8 +61,13 @@ To run the above test, put the code in basic.js and then run this command:
 (Note: if you didn't include the `-t` to point to a specific test, it would run all tests found in the `tests/` directory. Pretty nifty.)
 
 ##Step 5: Write some tests
-Now that you have some practice with setting up your first test, work through the test cases below. Use the [Nightwatch API docs](http://nightwatchjs.org/api) as a reference.
+Now that you have some practice with setting up your first test, work through the test cases below. Write tests that cover the cases described. Use the [Nightwatch API docs](http://nightwatchjs.org/api) as a reference.
 
-* **On the homepage, make sure the `.footer` and `.header` elements are present and visible**
-* **Make sure the link to "Sign Up" takes you to the "/sign-up.html" page**
-* **Make sure submitting the form on the signup page takes you back to the home page**
+Homepage tests
+
+* **On the homepage, the `.footer` and `.header` elements should be present and visible**
+* **The table should contain the css class `table-striped`**
+* **The link to "Sign Up" (header and footer) should take the user to the "/sign-up.html" page**
+
+Sign-up.html tests
+* **The form on the signup page should take the user back to the home page upon submitting**
