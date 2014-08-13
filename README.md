@@ -3,10 +3,11 @@ broken-site
 
 A Nightwatch.js tutorial 
 
-##Step 1: Setup Nightwatch, Selenium
+##Step 1: Setup Nightwatch, Selenium, dependencies
 We're going to add all the dependencies needed to run e2e tests with Nightwatch:
 * [Download](https://www.dropbox.com/s/97a28h3es0fcjt9/selenium-server-standalone-2.41.0.jar) the java selenium server and place it in a folder that you'll remember (could be on your desktop, in your home folder, or wherever you'd like)
 * Install nightwatch as a global npm module (with the -g option)
+* Be sure to run `bower install` to install all the front-end dependencies
 * Take a look at the nightwatch.json file. It contains all of the configuration needed to run nightwatch in your local environment.
 
 ##Step 2: Start Selenium
@@ -58,3 +59,10 @@ To run the above test, put the code in basic.js and then run this command:
 `nightwatch -t tests/basic.js`
 
 (Note: if you didn't include the `-t` to point to a specific test, it would run all tests found in the `tests/` directory. Pretty nifty.)
+
+##Step 5: Write some tests
+Now that you have some practice with setting up your first test, work through the test cases below. Use the [Nightwatch API docs](http://nightwatchjs.org/api) as a reference.
+
+* **On the homepage, make sure the `.footer` and `.header` elements are present and visible**
+* **Make sure the link to "Sign Up" takes you to the "/sign-up.html" page**
+* **Make sure submitting the form on the signup page takes you back to the home page**
