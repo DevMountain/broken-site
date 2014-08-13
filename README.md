@@ -31,7 +31,7 @@ Now, double check your nightwatch.json file to be sure that the "selenium" secti
 ##Step 3: Run a local server to make your "site" accessible by Selenium
 Selenium won't be able to "see" or test your site unless it's running on a server. This means that we can't simply open the index.html file in the browser window. We need it running behind a server.
 
-You can use the node module `http-server` (it can be globally installed with npm) that makes it *really* easy to standup a static server. (Hint: install http-server globally, then run `http-server` in your project's directory. It will start a server (probably with a port like 8081 or something) after which you can open a page pointing to that server in your browser (http://localhost:8081).
+You can use the node module `http-server` (it can be globally installed with npm) that makes it *really* easy to standup a static server. Hint: install http-server globally, then run `http-server` in your project's directory. It will start a server (probably with a port like 8081 or something) after which you can open a page pointing to that server in your browser (http://localhost:8081).
 
 ##Step 4: Create a test file
 
@@ -52,3 +52,9 @@ module.exports = {
 ```
 
 "Test home page" is the title of our test, and the function contains all of the logic for our test. The test itself is a set of chained *commands* or *assertions*. Commands tell selenium to do certain things (go to this url, wait for this element to be visible), while assertions make sure that something is true in order for the test to pass. You can have multiple commands and assertions in every test you write.
+
+To run the above test, put the code in basic.js and then run this command:
+
+`nightwatch -t tests/basic.js`
+
+(Note: if you didn't include the `-t` to point to a specific test, it would run all tests found in the `tests/` directory. Pretty nifty.)
