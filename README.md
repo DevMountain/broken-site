@@ -65,9 +65,11 @@ Now that you have some practice with setting up your first test, work through th
 
 Homepage tests
 
-* **On the homepage, the `.footer` and `.header` elements should be present and visible**
+* **The `.footer` and `.header` elements should be present and visible**
 * **The table should contain the css class `table-striped`**
 * **The link to "Sign Up" (header and footer) should take the user to the "/sign-up.html" page**
+* **The header and footer links should work**
 
 Sign-up.html tests
 * **The form on the signup page should take the user back to the home page upon submitting**
+* **The error div should not be showing when the page first loads, only when the user clicks submit without a password**
