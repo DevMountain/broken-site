@@ -72,4 +72,5 @@ Homepage tests
 
 Sign-up.html tests
 * **The form on the signup page should take the user back to the home page upon submitting**
-* **The error div should not be showing when the page first loads, only when the user clicks submit without a password**
+* **The `has-error` class should not be present on the `.form-group` elements when the page initially loads**
+* **The `has-error` class should show if the user tries to submit the form with blank values**
