@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <section class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">broken</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="container" id="main">
+      <h1 class="header">Sign up for <span class="broken">broken</span> site</h1>
+      <p>This is a great site that might or might not be broken. You can sign up for our awesome service or check out anything else you want. The next paragraph is really important.</p>
+      <form role="form" class="form" method="get" action="/">
+        <div class="form-group has-error">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group has-error">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </form>
+    </div>
+    <section class="footer">
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>Sign Up</a></li>
+      </ul>
+    </section>
+  </body>
+  <script type="text/javascript">
+    $(function() {
+      $('input').on('keypress', function() {
+        $(this).closest('.form-group').removeClass('has-errorz');
+      });
+      $('.form').on('submit', function() {
+        var email_valid = $('input[name=email]').val().length > 0;
+        var pass_valid = $('input[name=password]').val().length > 0;
+        if (email_valid && pass_valid) {
+          return true;
+        }
+        if (!email_valid) {
+          $('input[name=email]').closest('.form-group').addClass('has-errorz');
+        }
+        if (!pass_valid) {
+          $('input[name=password]').closest('.form-group').addClass('has-errorz');
+        }
+        return false;
+      })
+    });
+  </script>
+</html>
