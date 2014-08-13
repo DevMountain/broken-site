@@ -1,0 +1,9 @@
+{
+  "name": "broken-site",
+  "version": "0.0.0",
+  "description": "a nightwatch tutorial",
+  "author": "You",
+  "dependencies": {
+    "nightwatch": "~0.5.11"
+  }
+}
