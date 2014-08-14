@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="#">Home</a></li>
-            <li class="active"><a href="#">Sign Up</a></li>
+            <li><a class="active" id="signup-header" href="sign-up.html">Sign Up</a></li>
           </ul>
         </div>
       </div>
@@ -29,12 +29,12 @@
     <div class="container" id="main">
       <h1 class="header">Sign up for <span class="broken">broken</span> site</h1>
       <p>This is a great site that might or might not be broken. You can sign up for our awesome service or check out anything else you want. The next paragraph is really important.</p>
-      <form role="form" class="form" method="get" action="/">
-        <div class="form-group has-error">
+      <form role="form" class="form" method="post" action="/">
+        <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         </div>
-        <div class="form-group has-error">
+        <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
@@ -44,14 +44,14 @@
     <section class="footer">
       <ul>
         <li><a>Home</a></li>
-        <li><a>Sign Up</a></li>
+        <li><a href="sign-up.html" id="signup-footer">Sign Up</a></li>
       </ul>
     </section>
   </body>
   <script type="text/javascript">
     $(function() {
       $('input').on('keypress', function() {
-        $(this).closest('.form-group').removeClass('has-errorz');
+        $(this).closest('.form-group').removeClass('has-error');
       });
       $('.form').on('submit', function() {
         var email_valid = $('input[name=email]').val().length > 0;
@@ -60,10 +60,10 @@
           return true;
         }
         if (!email_valid) {
-          $('input[name=email]').closest('.form-group').addClass('has-errorz');
+          $('input[name=email]').closest('.form-group').addClass('has-error');
         }
         if (!pass_valid) {
-          $('input[name=password]').closest('.form-group').addClass('has-errorz');
+          $('input[name=password]').closest('.form-group').addClass('has-error');
         }
         return false;
       })
