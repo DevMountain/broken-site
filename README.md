@@ -74,3 +74,7 @@ Sign-up.html tests
 * **The form on the signup page should take the user back to the home page upon submitting**
 * **The `has-error` class should not be present on the `.form-group` elements when the page initially loads**
 * **The `has-error` class should show if the user tries to submit the form with blank values**
+
+## Copyright
+
+© DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
